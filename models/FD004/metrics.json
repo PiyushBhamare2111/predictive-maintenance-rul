@@ -1,0 +1,94 @@
+{
+  "fd": "FD004",
+  "window": 30,
+  "cap": 125,
+  "sensors": [
+    "s2",
+    "s3",
+    "s4",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "s12",
+    "s13",
+    "s14",
+    "s15",
+    "s17",
+    "s20",
+    "s21"
+  ],
+  "n_conditions": 6,
+  "results": {
+    "gbm": {
+      "rmse": 26.258806962928425,
+      "score": 4468.7750260435705,
+      "mae": 18.110451202854723,
+      "n": 248,
+      "rmse_capped_truth": 14.040858698208593,
+      "score_capped_truth": 909.335969025816,
+      "val_rmse_capped": 15.490746245094867,
+      "train_seconds": 2.7,
+      "device": "cpu",
+      "epochs_run": null
+    },
+    "cnn": {
+      "rmse": 27.76252427162529,
+      "score": 5596.284068442087,
+      "mae": 19.905107615455503,
+      "n": 248,
+      "rmse_capped_truth": 15.43550648019446,
+      "score_capped_truth": 1151.488610633602,
+      "val_rmse_capped": 15.78057155646495,
+      "train_seconds": 34.7,
+      "device": "cuda",
+      "epochs_run": 28
+    },
+    "lstm": {
+      "rmse": 26.35156062252756,
+      "score": 4832.0664026339045,
+      "mae": 19.191280564954205,
+      "n": 248,
+      "rmse_capped_truth": 14.525892318441421,
+      "score_capped_truth": 1142.796296958916,
+      "val_rmse_capped": 14.846924895758315,
+      "train_seconds": 31.4,
+      "device": "cuda",
+      "epochs_run": 26
+    }
+  },
+  "decision": {
+    "model": "lstm",
+    "cost_model": {
+      "c_fail": 100000.0,
+      "c_pm": 20000.0,
+      "c_waste": 0.0,
+      "lead_time": 10
+    },
+    "best_threshold": 24.0,
+    "cbm_cost_per_cycle": 85.46278095889241,
+    "cbm_fail_rate": 0.0,
+    "cbm_mean_rul_wasted": 16.34,
+    "tbm_best_age": 146.0,
+    "tbm_cost_per_cycle": 136.986301369863,
+    "tbm_fail_rate": 0.0,
+    "run_to_failure_cost_per_cycle": 399.42482824732383,
+    "n_val_engines": 50
+  },
+  "published": {
+    "CNN, Babu et al. 2016": [
+      29.16,
+      7886
+    ],
+    "LSTM, Zheng et al. 2017": [
+      28.17,
+      5550
+    ],
+    "DCNN, Li et al. 2018": [
+      23.31,
+      12466
+    ]
+  }
+}

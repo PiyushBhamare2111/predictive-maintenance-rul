@@ -1,0 +1,92 @@
+{
+  "fd": "FD001",
+  "window": 30,
+  "cap": 125,
+  "sensors": [
+    "s2",
+    "s3",
+    "s4",
+    "s7",
+    "s8",
+    "s9",
+    "s11",
+    "s12",
+    "s13",
+    "s14",
+    "s15",
+    "s17",
+    "s20",
+    "s21"
+  ],
+  "n_conditions": 1,
+  "results": {
+    "gbm": {
+      "rmse": 13.26789939643855,
+      "score": 260.6008920564247,
+      "mae": 10.006296081692172,
+      "n": 100,
+      "rmse_capped_truth": 11.974687614340002,
+      "score_capped_truth": 230.06488747131658,
+      "val_rmse_capped": 11.928125841814014,
+      "train_seconds": 3.8,
+      "device": "cpu",
+      "epochs_run": null
+    },
+    "cnn": {
+      "rmse": 15.747719851835864,
+      "score": 382.6557524251314,
+      "mae": 12.328176723718643,
+      "n": 100,
+      "rmse_capped_truth": 14.3717328304293,
+      "score_capped_truth": 338.737712425234,
+      "val_rmse_capped": 13.482063008323124,
+      "train_seconds": 7.4,
+      "device": "cuda",
+      "epochs_run": 39
+    },
+    "lstm": {
+      "rmse": 14.545060167160154,
+      "score": 392.3477877652738,
+      "mae": 10.815924806594849,
+      "n": 100,
+      "rmse_capped_truth": 13.4824018236107,
+      "score_capped_truth": 366.38949491638175,
+      "val_rmse_capped": 12.790093697530276,
+      "train_seconds": 9.3,
+      "device": "cuda",
+      "epochs_run": 39
+    }
+  },
+  "decision": {
+    "model": "gbm",
+    "cost_model": {
+      "c_fail": 100000.0,
+      "c_pm": 20000.0,
+      "c_waste": 0.0,
+      "lead_time": 10
+    },
+    "best_threshold": 16.0,
+    "cbm_cost_per_cycle": 106.69511869831955,
+    "cbm_fail_rate": 0.0,
+    "cbm_mean_rul_wasted": 5.15,
+    "tbm_best_age": 136.0,
+    "tbm_cost_per_cycle": 147.05882352941177,
+    "tbm_fail_rate": 0.0,
+    "run_to_failure_cost_per_cycle": 519.2107995846313,
+    "n_val_engines": 20
+  },
+  "published": {
+    "CNN, Babu et al. 2016": [
+      18.45,
+      1287
+    ],
+    "LSTM, Zheng et al. 2017": [
+      16.14,
+      338
+    ],
+    "DCNN, Li et al. 2018": [
+      12.61,
+      274
+    ]
+  }
+}
